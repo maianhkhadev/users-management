@@ -1,7 +1,7 @@
 import Layout from "../../layouts/Public";
 import FormLogin from "../../components/FormLogin";
 
-const Welcome = () => {
+const Page = () => {
   return (
     <Layout>
       <FormLogin />
@@ -9,4 +9,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default Page;

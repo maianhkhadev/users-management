@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { InputNumber } from "antd";
 
-export const PageNumber = styled(InputNumber)`
+export const FieldNumber = styled(InputNumber)`
     width: 100%;
 `

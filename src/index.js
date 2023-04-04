@@ -8,7 +8,8 @@ import PrivateRoute from "./routes/PrivateRoute";
 import PublicRoute from "./routes/PublicRoute";
 import Dashboard from "./pages/Dashboard";
 import Welcome from "./pages/Welcome";
-import Students from "./pages/Students";
+import Users from "./pages/Users";
+import Products from "./pages/Products";
 
 const router = createBrowserRouter([
   {
@@ -20,8 +21,12 @@ const router = createBrowserRouter([
     element: <PrivateRoute component={<Dashboard />} />,
   },
   {
-    path: "/students",
-    element: <PrivateRoute component={<Students />} />,
+    path: "/users",
+    element: <PrivateRoute component={<Users />} />,
+  },
+  {
+    path: "/products",
+    element: <PrivateRoute component={<Products />} />,
   },
 ]);
 

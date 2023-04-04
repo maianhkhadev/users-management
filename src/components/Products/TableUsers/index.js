@@ -1,18 +1,5 @@
-import { Table, Button } from "antd";
-import { UserOutlined } from "@ant-design/icons";
-import { Actions, Country, Image, Population } from "./styles";
-
-const getColor = (population) => {
-  if (population < 5) {
-    return "darkgreen";
-  }
-
-  if (population < 10) {
-    return "darkgoldenrod";
-  }
-
-  return "darkred";
-};
+import { Table, Button, Space } from "antd";
+import { Country, Image } from "./styles";
 
 const TableCities = (props) => {
   const columns = [
@@ -44,15 +31,7 @@ const TableCities = (props) => {
       dataIndex: "population",
       key: "population",
       align: "center",
-      width: "25%",
-      render: (_, item) => {
-        const color = getColor(item.population);
-        return (
-          <Population color={color}>
-            {item.population} <UserOutlined />
-          </Population>
-        );
-      },
+      width: "25%"
     },
     {
       title: "",
@@ -60,14 +39,7 @@ const TableCities = (props) => {
       width: "25%",
       render: (text, item) => {
         return (
-          <Actions>
-            <Button
-              onClick={() => {
-                props.onGetWeather(item.name);
-              }}
-            >
-              Weather
-            </Button>
+          <Space>
             <Button
               disabled={props.itemLoading}
               onClick={() => {
@@ -84,7 +56,7 @@ const TableCities = (props) => {
             >
               Delete
             </Button>
-          </Actions>
+          </Space>
         );
       },
     },
